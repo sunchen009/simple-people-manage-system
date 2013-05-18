@@ -1,0 +1,101 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="row-fluid">
+  <div class="span4"><img src="http://oss.aliyuncs.com/dwfaces/{{student.studentid}}.jpg"></div>
+  <div class="span8">	
+			<table class="table table-bordered ">
+			 <tbody>			 	
+			 	<tr>
+			 		<td>姓名：{{student.name}}</td>			 		
+			 		<td>学号：{{student.studentid}}</td>			 		
+			 		<td>班级：{{student.classid}}</td>
+			 		<td>当前状态：{{student.level}}</td>
+			 					 		
+			 	</tr>
+			 	<tr>			 		
+			 		<td>培养人1：{{student.oldman1}}</td>
+			 		<td>培养人2：{{student.oldman2}}</td>
+			 		<td>入党时间：{{student.belevel5time}}</td>
+			 		<td>转正时间：{{student.belevel6time}}</td>
+			 	</tr>
+			 	<tr>			 					 		
+			 		<td colspan="2" >计划发展年份：{{student.belevel5year}}</td>
+			 		<td colspan="2"> 计划发展季度：{{student.belevel5season}}</td>
+			 		
+			 	</tr>
+			 	<tr>			 					 		
+			 		
+			 		<td colspan="2">计划转正年份：{{student.belevel6year}}</td>
+			 		<td colspan="2">计划转正季度：{{student.belevel6season}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">入党申请书：{{student.item1}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">入党申请人登记表：{{student.item2}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">不同时期思想汇报：{{student.item3}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">入党积极分子考察表：{{student.item4}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">团组织推优表：{{student.item5}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">党的发展对象呈报表：{{student.item6}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">自传：{{student.item7}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">外调证明材料：{{student.item8}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">综合审查报告：{{student.item9}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">入党志愿时：{{student.item10}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">党内外群众意见：{{student.item11}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">发展党员公示情况登记表：{{student.item12}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">党校结业证书：{{student.item13}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">学习成绩单：{{student.item14}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">预备期思想汇报：{{student.item15}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">预备党员考察表：{{student.item16}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">转正申请书：{{student.item17}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">党内外群众意见：{{student.item18}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">预备党员公示情况：{{student.item19}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">入党志愿书：{{student.item20}}</td>
+			 	</tr>
+			 	<tr>
+			 		<td colspan="4">学习成绩单：{{student.item21}}</td>
+			 	</tr>
+			 </tbody>
+			</table>
+</div>
+</div>
+		
+
+
+{% endblock%}

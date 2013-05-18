@@ -1,0 +1,47 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="row-fluid">
+  <div class="span4"><img src="http://oss.aliyuncs.com/dwfaces/{{student.studentid}}.jpg"></div>
+  <div class="span8">	
+			<table class="table table-bordered ">
+			 <tbody>			 	
+			 	<tr>
+			 		<td>姓名：{{student.name}}</td>			 		
+			 		<td>父亲：{{student.father}}</td>			 		
+			 	</tr>
+			 	<tr>
+			 		<td>学号：{{student.studentid}}</td>			 		
+			 		<td>母亲：{{student.mother}}</td>			 		
+			 	</tr>
+			 	<tr>
+			 		<td>班级：{{student.classid}}</td>			 		
+			 		<td>父亲工作单位：{{student.fatherjob}}</td>			 	
+			 	</tr>
+			 	<tr>
+			 		<td>性别：{{student.sex}}</td>			 		
+			 		<td>母亲工作单位：{{student.motherjob}}</td>			 		
+			 	</tr>
+			 	<tr>
+			 		<td>寝室：{{student.dormitory}}</td>			 		
+			 		<td>联系电话：{{student.phone}}</td>			 		
+			 	</tr>
+			 	<tr>
+			 		<td>生日：{{student.birthday}}</td>			 		
+			 		<td>邮箱：{{student.email}}</td>			 		
+			 	</tr>
+			 	<tr>
+			 		<td>籍贯：{{student.hometown}}</td>
+			 		<td>当前状态：{{student.level}}</td>			 		
+			 	</tr>			 	
+			 	<tr>
+			 		<td colspan="2">获奖情况：{{student.prize}}</td>
+			 		
+			 	</tr>
+			 </tbody>
+			</table>
+</div>
+</div>
+		
+
+
+{% endblock%}

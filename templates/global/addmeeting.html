@@ -1,0 +1,60 @@
+{%extends "base.html" %}
+{% block content %}
+
+  <form class="form-horizontal" method="POST" action="/savemeeting">
+    <fieldset>
+      <div id="legend" class="">
+        <legend class="">添加会议记录</legend>
+      </div>
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">会议主题</label>
+          <div class="controls">
+            <input type="text" placeholder="" class="input-xlarge" name="theme" value="{{meeting.theme}}">
+            <p class="help-block"></p>
+          </div>
+        </div><div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">会议时间</label>
+          <div class="controls">
+            <input type="text" placeholder="" class="input-xlarge" name="meetingdate" value="{{meeting.meetingdate}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">会议地点</label>
+          <div class="controls">
+            <input type="text" placeholder="" class="input-xlarge" name="where" value="{{meeting.where}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+
+    <div class="control-group">
+
+          <!-- Textarea -->
+          <label class="control-label">主要内容</label>
+          <div class="controls">
+            <div class="textarea">
+                  <textarea type="" class="" style="margin: 0px; width: 271px; height: 159px;" name="whathappened"> {{meeting.whathappened}}</textarea>
+            </div>
+          </div>
+        </div>
+   <div class="control-group">
+          <label class="control-label">保存更改</label>
+
+          <!-- Button -->
+          <div class="controls">
+            <button type="submit" class="btn btn-success">提交</button>
+          </div>
+        </div>
+
+    </fieldset>
+  </form>
+
+  {% endblock content %}

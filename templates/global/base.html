@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <title>安全学院党务管理系统2.0Beta</title>
+    
+</head>
+<body style="position: relative;padding-top: 40px;">
+	<div class="container-fluid">
+	  <div class="row-fluid" id="header">
+	   <div  class="span12">
+	 	<div class="page-header">
+			  <h1>安全学院党务管理系统<small>为共产主义奋斗终身！</small></h1>
+		</div>
+		<div class="navbar navbar-fixed-top navbar-inverse">
+		  <div class="navbar-inner">
+		    <a class="brand" href="#"></a>
+		    <ul class="nav">
+		      <li class="active"><a href="/">首页</a></li>
+		      <li><a href="/addstudent">添加新生</a></li>
+		      <li><a href="#">发布通告</a></li>
+		      <li><a href="#">群发邮件</a></li>
+		      <li><a href="/addmeeting">添加会议</a></li>
+		      <li><a href="/addnote">添加备忘</a></li>
+		       <li><a href="/logout">安全退出</a> </li>
+		    </ul>
+		    <form class="navbar-form pull-right" method="POST" action="/search">
+			  <input type="text" placeholder="班级，学号，姓名" name="querystr" >
+			  <button type="submit" class="btn">搜索</button>
+			</form> 
+			
+		  </div>
+		</div>
+       </div>
+	  </div>
+	  
+	  <div class="row-fluid" id="main">
+	    <div class="span2">
+		    <ul class="nav nav-list">
+			  <li class="nav-header">人员管理</li>
+			  <li><a href="/studentlist/0/1"><i class="icon-user "></i>全部学生</a></li>
+			  <li><a href="/studentlist/1/1"><i class="icon-user "></i>入党申请人</a></li>
+			  <li><a href="/studentlist/2/1"><i class="icon-user "></i>推优</a></li>
+			  <li><a href="/studentlist/3/1"><i class="icon-user "></i>积极分子</a></li>
+			  <li><a href="/studentlist/4/1"><i class="icon-user "></i>发展对象</a></li>
+			  <li><a href="/studentlist/5/1"><i class="icon-user "></i>预备党员</a></li>
+			  <li><a href="/studentlist/6/1"><i class="icon-user "></i>正式党员</a></li>
+			  <li class="nav-header">工作管理</li>
+			  <li><a href="#"><i class=" icon-list-alt "></i>发展计划</a></li>
+			  <li><a href="#"><i class=" icon-file "></i>思想汇报</a></li>
+			  <li><a href="/meetinglist"><i class=" icon-tasks"></i>会议管理</a></li>
+			  <li><a href="/notelist"><i class=" icon-calendar "></i>支部备忘</a></li>
+			</ul>
+	    </div>
+	    <div class="span10">
+	      {% block content %}
+	      		<div class="hero-unit">
+				  <h1>安全学院党务管理系统</h1>
+				  <p>党务信息化</p>
+				  <p>
+				    <a class="btn btn-primary btn-large">
+				      开始体验
+				    </a>
+				  </p>
+				</div>
+	      {% endblock%}
+	    </div>
+	  </div>
+
+	  
+	</div>
+ 	
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

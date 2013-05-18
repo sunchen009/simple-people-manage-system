@@ -1,0 +1,21 @@
+{%extends "base.html" %}
+{% block content %}
+	{% if count!=0 %} 
+		 {% for meeting in meetinglist%}
+		<div class="alert alert-info">
+		  <a type="button" class="close" data-dismiss="alert" >×</a>
+		  <strong>新会议：{{meeting.theme}}于{{meeting.meetingdate}}在{{meeting.where}}召开</strong>
+		  {{meeting.whathappened}}
+
+		</div>
+		 {% endfor %}
+	{% else %}
+			<div class="hero-unit">
+			  <h1>列表为空</h1>
+			  <p>您可以通过编辑学生信息添加相应对象</p>
+			  <p>
+			   
+			  </p>
+			</div>
+			{% endif%} 
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}	 
+ {% if count!=0 %}    
+<table class="table table-hover">
+	  <thead>
+	    <tr>	      
+	      <th>学号</th>
+	      <th>姓名</th>
+	      <th>班级</th>
+	      <th>操作</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	
+	     {% for student in student_list %}
+	    <tr>	     
+	      <td>{{student.studentid}}</td>
+	      <th>{{student.name}}</td>
+	      <td>{{student.classid}}</td>
+	      <td>
+	      	<div class="btn-group">
+			  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>
+			  	操作
+			    <span class="caret"></span>
+			  </a>
+			  <ul class="dropdown-menu">
+			    <li><a href="/studentinfo/{{student.studentid}}"><i class="icon-eye-open"></i>个人资料</a></li>
+			    <li><a href="/highlevelinfo/{{student.studentid}}"><i class="icon-eye-open"></i>党内资料</a></li>
+			    <li><a href="/sendmailto/{{student.studentid}}"><i class="icon-envelope"></i>发送邮件</a></li>
+			    <li><a href="/editstudentinfo/{{student.studentid}}"><i class="icon-trash"></i>编辑信息</a></li>
+			    <li><a href="/deletestudent/{{student.studentid}}"><i class="icon-trash"></i>删除</a></li>			   
+			  </ul>
+			</div>
+	      </td>
+	    </tr>	   
+	    {% endfor %} 
+
+	  </tbody>  
+</table>
+<div class="pagination pagination-centered span12">			    		 
+					<ul>						    
+						    {%if page == 1 %}						    	
+						    <li class="disabled"><a href="#" >前一页</a></li>
+						    {%endif %}
+						    {% if page != 1%}
+						    <li><a href="/studentlist/{{level}}/{{page-1}}" >前一页</a></li>						    	
+						    {% endif%}
+						   	
+						    {%  for i in range(page_count)  %}	
+							    {%if i == page-1 %}				  
+							    <li class="active"><a href="/studentlist/{{level}}/{{i+1}}">{{i+1}}</a></li>
+							    {%endif%}
+							    {%if i != page-1 %}				  
+							    <li ><a href="/studentlist/{{level}}/{{i+1}}">{{i+1}}</a></li>
+							    {%endif%}
+						    {%  endfor  %}						  
+						    {%if page== page_count %}
+						    <li class="disabled"><a href="#" >后一页</a></li>
+						    {%endif %}
+						    {% if page != page_count%}
+						    <li><a href="/studentlist/{{level}}/{{page+1}}" >后一页</a></li>
+						    {% endif%}							  						    
+						<li><a href="#">共{{page_count}}页</a></li>					
+					</ul>						  
+				</div>	
+			{% else %}
+			<div class="hero-unit">
+			  <h1>列表为空</h1>
+			  <p>您可以通过编辑学生信息添加相应对象</p>
+			  <p>
+			   
+			  </p>
+			</div>
+			{% endif%} 
+
+{% endblock %}

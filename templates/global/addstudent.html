@@ -1,0 +1,187 @@
+{%extends "base.html" %}
+{% block content %}
+  <form class="form-horizontal" action="/savestudent" method="post">
+    <fieldset>
+      <div id="legend" class="">
+        <legend class="">编辑学生信息</legend>
+      </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">姓名</label>
+          <div class="controls">
+            <input type="text" placeholder="请输入姓名" class="input-xlarge" name="name" value="{{student.name}}">
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">学号</label>
+          <div class="controls">
+            <input type="text" placeholder="请输入学号" class="input-xlarge" name="studentid" value="{{student.studentid}}">
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">班级</label>
+          <div class="controls">
+            <input type="text" placeholder="例:100111111" class="input-xlarge" name="classid" value="{{student.classid}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">生日</label>
+          <div class="controls">
+            <input type="text" placeholder="例：1991-00-00" class="input-xlarge" name="birthday" value="{{student.birthday}}">
+            <p class="help-block"></p>
+          </div>
+        </div><div class="control-group">
+          <label class="control-label">性别</label>
+
+          <!-- Multiple Checkboxes -->
+          <div class="controls">
+      <!-- Inline Checkboxes -->
+      <label class="radio inline">
+        <input type="radio" value="男" name="sex"  checked="checked" >
+        男
+      </label>
+      <label class="radio inline">
+        <input type="radio" value="女" name="sex" >
+        女
+      </label>
+  </div>
+
+        </div><div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">寝室</label>
+          <div class="controls">
+            <input type="text" placeholder="例:S19-110" class="input-xlarge" name="dormitory" value="{{student.dormitory}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">籍贯</label>
+          <div class="controls">
+            <input type="text" placeholder="例：河北省沧州市" class="input-xlarge" name="hometown" value="{{student.hometown}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">手机号码</label>
+          <div class="controls">
+            <input type="text" placeholder="例：15500000000" class="input-xlarge" name="phone" value="{{student.phone}}">
+            <p class="help-block"></p>
+          </div>
+        </div><div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">电子邮箱</label>
+          <div class="controls">
+            <input type="text" placeholder="例：xxx@xxx.com" class="input-xlarge" name="email" value="{{student.email}}">
+            <p class="help-block"></p>
+          </div>
+        </div><div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">父亲姓名</label>
+          <div class="controls">
+            <input type="text" placeholder="" class="input-xlarge" name="father" value="{{student.father}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">父亲工作单位</label>
+          <div class="controls">
+            <input type="text" placeholder="" class="input-xlarge" name="fatherjob" value="{{student.fatherjob}}">
+            <p class="help-block"></p>
+          </div>
+        </div><div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">母亲姓名</label>
+          <div class="controls">
+            <input type="text" placeholder="" class="input-xlarge" name="mother" value="{{student.mother}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">母亲工作单位</label>
+          <div class="controls">
+            <input type="text" placeholder="" class="input-xlarge" name="motherjob" value="{{student.motherjob}}">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+
+    <div class="control-group">
+
+          <!-- Textarea -->
+          <label class="control-label">获奖情况</label>
+          <div class="controls">
+            <div class="textarea">
+                  <textarea type="" class="" style="margin: 0px; width: 271px; height: 253px;" name="prize" >{{student.prize}} </textarea>
+            </div>
+          </div>
+        </div>
+
+    <div class="control-group">
+          <label class="control-label">证件照</label>
+
+          <!-- File Upload -->
+          <div class="controls">
+            <input class="input-file" id="fileInput" type="file">
+          </div>
+        </div>
+
+     <div class="control-group">
+
+          <!-- Select Basic -->
+          <label class="control-label">当前状态</label>
+          <div class="controls">
+            <select class="input-xlarge" name="level" >
+		      <option value="0" selected="selected" >普通学生</option>
+		      <option value="1"  >入党申请人</option>
+		      <option value="2">推优学生</option>
+		      <option value="3" >积极分子</option>
+		      <option value="4" >发展对象</option>
+		      <option value="5" >预备党员</option>
+		      <option value="6" >正式党员</option>
+		      
+		  </select>
+          </div>
+    </div>
+
+    <div class="control-group">
+          <label class="control-label"></label>
+
+          <!-- Button -->
+          <div class="controls">
+            <button type="submit"class="btn btn-success">提交更改</button>
+          </div>
+        </div>
+
+    </fieldset>
+  </form>
+
+{% endblock%}
